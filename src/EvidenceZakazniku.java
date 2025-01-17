@@ -1,6 +1,4 @@
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class EvidenceZakazniku {
@@ -25,5 +23,11 @@ public class EvidenceZakazniku {
                 writer.newLine();
             }
         }
+    }
+
+    public void NactiZeSouboru(String soubor) throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(soubor))) {
+        }
+
     }
 }
