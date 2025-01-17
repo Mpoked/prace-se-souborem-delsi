@@ -11,6 +11,10 @@ public class Main {
         try {
             evidence.ulozitDoSouboru(soubor);
             System.out.println("Zákazníci byli uloženi do souboru.");
+            EvidenceZakazniku novaEvidence = new EvidenceZakazniku();
+            novaEvidence.nactiZeSouboru(soubor);
+            System.out.println("Načtení zákazníků ze souboru:");
+            novaEvidence.zobrazitZakazniky();
         } catch (IOException e){
             System.err.println(e.getMessage());
         }
