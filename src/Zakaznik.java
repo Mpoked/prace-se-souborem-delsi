@@ -4,13 +4,13 @@ public class Zakaznik {
     private String jmeno;
     private LocalDate datumNarozeni;
     private String mesto;
-    private int pocetProdejcu;
+    private int pocetProdeju;
 
-    public Zakaznik(String jmeno, LocalDate datumNarozeni, String mesto, int pocetProdejcu) {
+    public Zakaznik(String jmeno, LocalDate datumNarozeni, String mesto, int pocetProdeju) {
         this.jmeno = jmeno;
         this.datumNarozeni = datumNarozeni;
         this.mesto = mesto;
-        this.pocetProdejcu = pocetProdejcu;
+        this.pocetProdeju = pocetProdeju;
     }
 
     public String getJmeno() {
@@ -37,11 +37,16 @@ public class Zakaznik {
         this.mesto = mesto;
     }
 
-    public int getPocetProdejcu() {
-        return pocetProdejcu;
+    public int getPocetProdeju() {
+        return pocetProdeju;
     }
 
-    public void setPocetProdejcu(int pocetProdejcu) {
-        this.pocetProdejcu = pocetProdejcu;
+    public void setPocetProdeju(int pocetProdeju) {
+        this.pocetProdeju = pocetProdeju;
+    }
+
+    @Override
+    public String toString() {
+        return jmeno + ":" + datumNarozeni + ":" + mesto + ":" + pocetProdeju;
     }
 }
